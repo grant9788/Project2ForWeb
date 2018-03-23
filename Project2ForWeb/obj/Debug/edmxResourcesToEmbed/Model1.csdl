@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NewExpensesModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="NewExpensesEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="tblExpenses" EntityType="NewExpensesModel.tblExpens" />
+    <EntitySet Name="tblNewExpenses2" EntityType="NewExpensesModel.tblNewExpenses2" />
+  </EntityContainer>
+  <EntityType Name="tblExpens">
+    <Key>
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="Description" />
+      <PropertyRef Name="Amount" />
+    </Key>
+    <Property Name="Date" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="true" />
+    <Property Name="Category" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="tblNewExpenses2">
+    <Key>
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="Description" />
+      <PropertyRef Name="Amount" />
+    </Key>
+    <Property Name="Date" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="true" />
+    <Property Name="Category" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+  </EntityType>
+</Schema>
